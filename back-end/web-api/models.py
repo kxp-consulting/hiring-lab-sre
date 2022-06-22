@@ -18,5 +18,4 @@ class Post(Base):
     id = Column(Integer, primary_key=True)
     description = Column(String)
     created_by = Column(String)
-    created_at = Column(DateTime)
-
+    created_at = Column(DateTime)    

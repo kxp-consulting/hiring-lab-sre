@@ -1,17 +1,18 @@
-resource "azurerm_sql_server" "interview_test" {
-  name                         = "sql-interview-${var.unique_person_name}"
-  resource_group_name          = var.rg_name
-  location                     = var.location
-  version                      = "12.0"
-  administrator_login          = var.db_username
-  administrator_login_password = var.db_password
+resource "azurerm_postgresql_flexible_server" "main" {
+  name                   = "psql-interview-${var.unique_person_name}"
+  resource_group_name    = var.rg_name
+  location               = var.location
+  version                = "12"
+  administrator_login    = var.db_username
+  administrator_password = var.db_password
+  storage_mb             = 32768
+  sku_name               = "B_Standard_B1ms"
+  zone                   = 2
 }
 
-resource "azurerm_sql_database" "interview_test" {
-  name                             = "sqldb-interview-${var.unique_person_name}"
-  resource_group_name              = var.rg_name
-  location                         = var.location
-  server_name                      = azurerm_sql_server.interview_test.name
-  requested_service_objective_name = "Basic"
-  zone_redundant                   = false
+resource "azurerm_postgresql_flexible_server_database" "main" {
+  name      = "db-core-01"
+  server_id = azurerm_postgresql_flexible_server.main.id
+  collation = "en_US.utf8"
+  charset   = "utf8"
 }

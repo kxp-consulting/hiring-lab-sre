@@ -1,7 +1,7 @@
 variable "person_name" {
   description = "Euphoric person that can take this test :)"
   type    = string
-  default = ""
+  default = "rafael"
 }
 
 variable "location" {
