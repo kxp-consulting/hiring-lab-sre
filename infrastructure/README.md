@@ -1,13 +1,16 @@
-# Teste de conhecimentos IaC
+# KXP SRE Hiring Lab: Infraestrutura
 
-Olá caro participante estamos felizes da sua disposição para realizar esse teste, ele não será dificil mas envolverá muita atenção. :)
+A infraestrutura da aplicação consiste em:
+
+- 1 servidor de banco de dados postgres
+- 1 servidor web em formato PaaS (Azure App Service)
+- 1 blob storage para armazenamento dos arquivos estáticos
+
+Para simplificar o laboratório, disponibilizamos essa configuração em terraform para que você possa criar/recriar o ambiente com facilidade.
 
 Para executar esse teste você precisa ter instalado:
 
-```
-Terraform > v1.1.5
-az-cli  > 2.35.0
-```
+- terraform > v1.1.5
+- az-cli  > 2.35.0
 
-Você precisará logar no azure com a conta que foi convidada anteriormente
-Existirá um grupo de recursos chamado `rg-interview-SEUNOME`
+Você precisará logar no azure com a conta que foi convidada anteriormente. Você receberá acesso a um resource group onde devem ser implementado o laboratório.
