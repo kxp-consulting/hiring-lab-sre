@@ -29,21 +29,21 @@ locals {
 module "storage" {
   source   = "./modules/storage"
   location = var.location
-  rg_name  = "rg-interview-${var.person_name}"
+  rg_name  = var.rg_name
   unique_person_name = local.unique_person_name
 }
 
 module "apps" {
   source   = "./modules/apps"
   location = var.location
-  rg_name  = "rg-interview-${var.person_name}"
+  rg_name  = var.rg_name
   unique_person_name = local.unique_person_name
 }
 
 module "database" {
   source   = "./modules/database"
   location = var.location
-  rg_name  = "rg-interview-${var.person_name}"
+  rg_name  = var.rg_name
   unique_person_name = local.unique_person_name
   db_username = var.db_username
   db_password = var.db_password

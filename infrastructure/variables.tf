@@ -1,13 +1,18 @@
 variable "person_name" {
   description = "Euphoric person that can take this test :)"
-  type    = string
-  default = "rafael"
+  type        = string
+  default     = "rafael"
+}
+
+variable "rg_name" {
+  description = "Nome do resource group"
+  type        = string
 }
 
 variable "location" {
   description = "Azure location that deploy resources"
-  type    = string
-  default = "eastus"
+  type        = string
+  default     = "eastus"
 }
 
 variable "db_username" {
