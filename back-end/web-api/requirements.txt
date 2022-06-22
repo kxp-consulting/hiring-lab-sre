@@ -1,2 +1,4 @@
+python-dotenv
+psycopg2
 flask
-sqlalchemy
+flask-sqlalchemy
