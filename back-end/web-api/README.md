@@ -7,7 +7,7 @@ Esta é uma API de exemplo construída em Flask (Python) que armazena e retorna 
 Para rodar localmente é necessário instalar as dependencias e executar o script de servidor local.
 
 Pré-requisitos:
-- python 3.9 e pip (gerenciador de pacotes do python)
+- python 3.7 e pip (gerenciador de pacotes do python)
 - Demais requisitos são providos no arquivo de deps (requirements.txt)
 
 Instalando as deps
